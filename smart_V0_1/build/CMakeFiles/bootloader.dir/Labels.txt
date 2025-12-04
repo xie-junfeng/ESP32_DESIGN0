@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/CMakeFiles/bootloader
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/CMakeFiles/bootloader.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/CMakeFiles/bootloader-complete.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/xie/Desktop/esp32/test/06_WiFi_TCPClient/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
