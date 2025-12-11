@@ -25,7 +25,7 @@
 
 ////////////////////////////参数配置///////////////////////
 
-/*FreeRTOS********************************************** ****/
+/*FreeRTOS**************************************************/
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
@@ -70,6 +70,7 @@ void PWM_task(void *pvParameters);          /* 任务函数 */
 i2c_obj_t i2c0_master;
 /* PWM_TASK 任务参数*/
 uint16_t ledpwmval = 0;
+uint8_t recive_buf[100]; 
 
 /*freertos参数*/
 static portMUX_TYPE my_spinlock = portMUX_INITIALIZER_UNLOCKED;
@@ -80,6 +81,8 @@ static uint8_t temperature;
 static uint8_t humidity;
 uint8_t err;
 
+
+
 ////////////////////////////////////////////////////////////////
 /**
  * @brief       程序入口
@@ -88,7 +91,7 @@ uint8_t err;
  */
 void app_main(void)
 {
-////////////////////////////NVS轻量级存储初始化区域///////////////////////
+////////////////////////////NVS轻量级存储初始化区域/////////////////////
     esp_err_t ret;
 
     ret = nvs_flash_init();             /* 初始化NVS */
@@ -161,7 +164,7 @@ void app_main(void)
 
 ////////////////////////////主函数功能任务///////////////////////////
   
-    lwip_demo(&temperature, &humidity);            /* lwip测试代码 */
+   uint8_t recive_buf=lwip_demo(&temperature, &humidity);            /* lwip测试代码 */
 
 ////////////////////////////////////////////////////////////////////
 }
@@ -207,7 +210,6 @@ void led_task(void *pvParameters)
 
 
 
-
 void DHT11_task(void *pvParameters)
 {
     pvParameters = pvParameters;
@@ -237,9 +239,10 @@ void PWMsk(void *pvParameters)
     while (1)
     {
 
+    vTaskDelay(500);
+    pwm_init(10, 1000,8,0);     /* 初始化PWM */
+    pwm_set_duty(ledpwmval,0);
 
-    pwm_init(10, 1000);     /* 初始化PWM */
-    pwm_set_duty(ledpwmval);
     }
  }
  /////////////////////////////////////////////////////////////////////

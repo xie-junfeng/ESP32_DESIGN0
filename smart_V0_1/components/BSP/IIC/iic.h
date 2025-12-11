@@ -48,8 +48,8 @@ extern i2c_obj_t iic_master[I2C_NUM_MAX];
 #define I2C_FLAG_WRITE                  (0x04)                                                          /* 写标志 */
 
 /* 引脚与相关参数定义 */
-#define IIC0_SDA_GPIO_PIN               GPIO_NUM_41                                                     /* IIC0_SDA引脚 */
-#define IIC0_SCL_GPIO_PIN               GPIO_NUM_42                                                     /* IIC0_SCL引脚 */
+#define IIC0_SDA_GPIO_PIN               GPIO_NUM_10                                                     /* IIC0_SDA引脚 GPIO_NUM_41*/
+#define IIC0_SCL_GPIO_PIN               GPIO_NUM_9                                                      /* IIC0_SCL引脚 GPIO_NUM_42*/
 #define IIC1_SDA_GPIO_PIN               GPIO_NUM_5                                                      /* IIC1_SDA引脚 */
 #define IIC1_SCL_GPIO_PIN               GPIO_NUM_4                                                      /* IIC1_SCL引脚 */
 #define IIC_FREQ                        400000                                                          /* IIC通信频率 */

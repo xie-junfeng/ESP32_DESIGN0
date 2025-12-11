@@ -34,7 +34,7 @@
 
 
 /* 引脚定义 */
-#define LCD_NUM_WR      GPIO_NUM_40
+#define LCD_NUM_WR      GPIO_NUM_13
 #define LCD_NUM_CS      GPIO_NUM_21
 
 /* IO操作 */

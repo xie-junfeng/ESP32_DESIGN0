@@ -13,9 +13,8 @@
 
 #include "lwip_demo.h"
 
-
 /* 需要自己设置远程IP地址 */
-#define IP_ADDR   "192.168.3.10"
+#define IP_ADDR   "192.168.6.30"
 
 #define LWIP_DEMO_RX_BUFSIZE         100                        /* 最大接收数据长度 */
 #define LWIP_DEMO_PORT               8080                       /* 连接的本地端口号 */
@@ -123,7 +122,7 @@ sock_start:
             vTaskDelay(10);
         }
     }
-
+       return g_lwip_demo_recvbuf;
 }
 
 /**

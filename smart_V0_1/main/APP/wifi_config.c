@@ -22,9 +22,9 @@
 
 
 /* 链接wifi名称 */
-#define DEFAULT_SSID        "琳宝的小窝"
+#define DEFAULT_SSID        "xir"
 /* wifi密码 */
-#define DEFAULT_PWD         "520lihaolin"
+#define DEFAULT_PWD         "12345678"
 /* 事件标志 */
 static EventGroupHandle_t   wifi_event;
 #define WIFI_CONNECTED_BIT  BIT0

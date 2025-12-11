@@ -34,7 +34,7 @@ void pwm_init(uint8_t resolution, uint16_t freq,uint8_t Gpi,uint8_t Channe)
     ledc_timer_config(&ledc_timer);                 /* 配置定时器 */
 
     /* 配置LEDC通道 */
-    ledc_channel.gpio_num = Gpio;      /* LED控制器通道对应引脚 */
+    ledc_channel.gpio_num = Gpi;      /* LED控制器通道对应引脚 */
     ledc_channel.speed_mode = LEDC_LOW_SPEED_MODE;  /* LEDC高速模式 */
     ledc_channel.channel = Channe;    /* LEDC控制器通道号 */
     ledc_channel.intr_type = LEDC_INTR_DISABLE;     /* LEDC失能中断 */

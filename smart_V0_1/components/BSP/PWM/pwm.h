@@ -33,7 +33,7 @@
 #define LEDC_PWM_CH3_CHANNEL    LEDC_CHANNEL_3     /* LED控制器通道号 */
 
 /* 函数声明 */
-void pwm_init(uint8_t resolution, uint16_t freq);   /* 初始化PWM */
-void pwm_set_duty(uint16_t duty);                   /* PWM占空比设置 */
+void pwm_init(uint8_t resolution, uint16_t freq,uint8_t Gpi,uint8_t Channe);   /* 初始化PWM */
+void pwm_set_duty(uint16_t duty,uint8_t Channe);                   /* PWM占空比设置 */
 
 #endif
